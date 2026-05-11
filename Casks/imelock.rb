@@ -1,6 +1,6 @@
 cask "imelock" do
-  version "1.0.0"
-  sha256 "f4499ed713504a8ba10d33d47fd1af83fc10fc30f0e3ed1d30ac5c5b1bb3eb2e"
+  version "1.1.0"
+  sha256 "1c0ac77fbaec68d47c4b1eab6ba1093522ad218ee97a466a50b647cce8a6c30d"
 
   url "https://github.com/dreamor/ImeLock/releases/download/v#{version}/ImeLock-#{version}.zip"
   name "ImeLock"
