@@ -1,10 +1,10 @@
 cask "imelock" do
-  version "1.1.0"
-  sha256 "1c0ac77fbaec68d47c4b1eab6ba1093522ad218ee97a466a50b647cce8a6c30d"
+  version "1.1.1"
+  sha256 "7324d527a9a11a77c7e6cfd9a1fc06c047ab98e5e649c7e6b78d573f3fa024d0"
 
   url "https://github.com/dreamor/ImeLock/releases/download/v#{version}/ImeLock-#{version}.zip"
   name "ImeLock"
-  desc "macOS input method locker - lock input method per app"
+  desc "macOS input method locker - prevent accidental switching across apps"
   homepage "https://github.com/dreamor/ImeLock"
 
   depends_on macos: ">= :sonoma"
