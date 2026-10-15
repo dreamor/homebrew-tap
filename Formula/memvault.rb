@@ -1,9 +1,9 @@
 class Memvault < Formula
   desc "Shared memory layer for every AI agent you run (CLI + MCP server)"
   homepage "https://github.com/dreamor/MemVault"
-  url "https://github.com/dreamor/MemVault/releases/download/v0.4.2/memvault-aarch64-apple-darwin.tar.gz"
-  sha256 "70e3c5c29c0bb5234e697ded2d2455fc2f03aa0c738e0b1618b401918ebdfcff"
-  version "0.4.2"
+  url "https://github.com/dreamor/MemVault/releases/download/v0.4.3/memvault-aarch64-apple-darwin.tar.gz"
+  sha256 "693e7b115ffd623a489a7dc63b23036532ecd5886a64a523055955619ece04a7"
+  version "0.4.3"
   license "MIT"
 
   # Intel Macs are not shipped as prebuilt binaries (no x86_64-apple-darwin
