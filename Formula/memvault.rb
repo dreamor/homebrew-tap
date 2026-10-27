@@ -5,10 +5,10 @@ class Memvault < Formula
   # China mirror, which serves it at multi-MB/s where the same archive from
   # github.com crawls. npmjs.org serves byte-identical bytes, so it is a
   # checksum-compatible fallback.
-  url "https://registry.npmmirror.com/@dreamor/memvault-bin/-/memvault-bin-0.6.4.tgz"
-  mirror "https://registry.npmjs.org/@dreamor/memvault-bin/-/memvault-bin-0.6.4.tgz"
-  sha256 "0dfd1d258134837cd5eef9ed5218867446228db3c3e084884af0c62fd30c0002"
-  version "0.6.4"
+  url "https://registry.npmmirror.com/@dreamor/memvault-bin/-/memvault-bin-0.6.5.tgz"
+  mirror "https://registry.npmjs.org/@dreamor/memvault-bin/-/memvault-bin-0.6.5.tgz"
+  sha256 "13caa7fcbf0ae4d1a5c80cf7693a29560d9f7cbc9fcef96b82f05a9a6dfe56be"
+  version "0.6.5"
   license "MIT"
 
   # Intel Macs are not shipped as prebuilt binaries (no x86_64-apple-darwin
