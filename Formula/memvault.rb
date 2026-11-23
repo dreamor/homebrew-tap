@@ -5,10 +5,10 @@ class Memvault < Formula
   # China mirror, which serves it at multi-MB/s where the same archive from
   # github.com crawls. npmjs.org serves byte-identical bytes, so it is a
   # checksum-compatible fallback.
-  url "https://registry.npmmirror.com/@dreamor/memvault-bin/-/memvault-bin-0.7.6.tgz"
-  mirror "https://registry.npmjs.org/@dreamor/memvault-bin/-/memvault-bin-0.7.6.tgz"
-  sha256 "27796f5f4391902d6987230bccb33c6a91b41ce077c44e6eb3fd786e957f19aa"
-  version "0.7.6"
+  url "https://registry.npmmirror.com/@dreamor/memvault-bin/-/memvault-bin-0.7.7.tgz"
+  mirror "https://registry.npmjs.org/@dreamor/memvault-bin/-/memvault-bin-0.7.7.tgz"
+  sha256 "cfd09805e4368418998919a6f3b20b826258fa932bf6caa413abf35017df8739"
+  version "0.7.7"
   license "MIT"
 
   # Intel Macs are not shipped as prebuilt binaries (no x86_64-apple-darwin
@@ -30,10 +30,11 @@ class Memvault < Formula
   # `brew services start memvault` (or `brew services restart memvault`)
   # runs the REST backend that hosts the embedded Web Dashboard, and starts
   # it again at login (LaunchAgent on macOS / systemd user unit on Linux).
-  # --auto-port keeps behavior sane if another MemVault instance is already
-  # serving the preferred port: it adopts that instance instead of failing.
-  # That adoption path exits 0, so restart only on an abnormal exit; keeping
-  # the job alive unconditionally would spin on every successful adoption.
+  # --auto-port adopts a same/newer MemVault instance, but replaces a strictly
+  # older build first. That takeover is what keeps an upgrade from exiting 0
+  # while the previous detached process keeps serving unsupervised. Only a
+  # successful adoption exits 0; a failed takeover is an error, so launchd
+  # retries instead of leaving  stopped.
   service do
     # The Web Dashboard is embedded in the binary — no --serve-web needed.
     run [opt_bin/"memvault-mcp", "--transport", "http", "--port", "3777", "--auto-port"]
